@@ -589,3 +589,10 @@ a {
   font-size: 12px;
   text-align: right;
 }
+
+/* ///フラッシュメッセージ/// */
+.flash-message {
+  text-align: center;
+  background-color: blue;
+  color: white;
+}

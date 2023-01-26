@@ -33,6 +33,13 @@
         </div>
       </div>
     </header>
+    <%# フラッシュメッセージの表示 %>
+    <div class="flash-message">
+      <% flash.each do |message_type, message| %>
+        <%= message %>
+      <% end %>
+    </div>
+    <%# //フラッシュメッセージの表示 %>
     <%= yield %>
     <footer class="footer">
       <p class="copyright">Copyright © MemoPro All rights reserved.</p>
