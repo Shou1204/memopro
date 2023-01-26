@@ -13,7 +13,7 @@
       </div>
     </div>
 
-    <%# 回答一覧の表示 %>
+    <%# コメント一覧の表示 %>
     <div class="show-answers">
       <div class="answers-heading">
         コメント一覧：
@@ -26,11 +26,16 @@
           <div class="answer-content__name">
             <%= comment.user.name %>
           </div>
+          <div class="comment-destroy">
+          <% if comment.user.id == current_user.id %>
+            <%= link_to "削除" ,"/memos/#{@memo.id}/comments/#{comment.id}", method: :DELETE %>
+          <% end %>
+          </div>
         </div>
       <% end %>
     </div>  
-    <%# //回答一覧の表示 %>
-    <%# 回答投稿フォームの表示 %>
+    <%# //コメント一覧の表示 %>
+    <%# コメント投稿フォームの表示 %>
     <div class="show-answer-form">
       <%= form_with(model: [@memo, @comment], local: true) do |form| %>
         <div class="show-answer-form__heading">
@@ -43,7 +48,7 @@
         </div>
       <% end %>    
     </div>
-    <%# //回答投稿フォームの表示 %>
+    <%# //コメント投稿フォームの表示 %>
       
   </div>
 

@@ -1,6 +1,4 @@
 class CommentsController < ApplicationController
-  def new
-  end
 
   def create
     @comment = Comment.new(comment_params)
@@ -9,6 +7,12 @@ class CommentsController < ApplicationController
     redirect_to memo_path(params[:memo_id])
   end
 
+  def destroy
+    binding.pry
+    comment = Comment.find(params[:id])
+    @comment = comment.destroy
+    redirect_to memo_path(params[:memo_id])
+  end
   private
 
   def comment_params
