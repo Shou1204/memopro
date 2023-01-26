@@ -1,5 +1,5 @@
-<main class="main">
-  <div class="inner">
+<div class='index-main'>
+  <div class='post-contents'>
     <% if user_signed_in? %>
       <%# ログインしているときは以下を表示する %>
       <div class="greeting"> 
@@ -8,9 +8,10 @@
         <%# <%= link_to current_user.name + "さん", user_path(current_user.id), class: :greeting__link%> 
       </div> 
     <% end %>
-    <div class="card__wrapper">
+    <div class="">
+
       <%# 投稿機能実装後、部分テンプレートでプロトタイプ投稿一覧を表示する %>
-      <%# <%= render partial: "prototype", collection: @prototypes,locals: {prototype: @prototype} %>
+      <%= render partial: "memo", collection: @memo,locals: {memo: @memo} %>
     </div>
   </div>
 </main>

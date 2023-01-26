@@ -1,5 +1,6 @@
 class MemosController < ApplicationController
   def index
+    @memo = Memo.all
   end
 
   def new
@@ -13,6 +14,10 @@ class MemosController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    @memo = Memo.find(params[:id])
   end
 
   private
