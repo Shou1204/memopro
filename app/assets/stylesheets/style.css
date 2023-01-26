@@ -405,3 +405,11 @@ a {
     font-weight: bold;
     -webkit-font-smoothing: antialiased;
 }
+
+.memo_image {
+  padding-bottom: 15px;
+}
+
+.image_form {
+  margin-bottom: 15px;
+}
