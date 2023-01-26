@@ -460,11 +460,14 @@ a {
 
 .question {
   width: 630px;
+  height: 100%;
   padding: 10px 15px;
   background-color: #FFFFFF;
 }
 
 .question-top {
+  width: 100%;
+  height: 33%;
   display: flex;
   justify-content: space-between;
 }
@@ -480,10 +483,18 @@ a {
 }
 
 .question-middle {
-  margin-top: 10px;
+  width: 100%;
+  height: 50%;
 }
 
 .question-middle__content {
   font-size: 12px;
 }
 
+.question-bottom {
+  font-size: 12px;
+}
+
+.question-bottom2 {
+
+}
