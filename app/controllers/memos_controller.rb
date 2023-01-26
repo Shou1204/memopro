@@ -18,6 +18,8 @@ class MemosController < ApplicationController
 
   def show
     @memo = Memo.find(params[:id])
+    @comment = Comment.new
+    @comments = @memo.comments
   end
 
   private
