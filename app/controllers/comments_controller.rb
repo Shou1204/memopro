@@ -8,7 +8,6 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    binding.pry
     comment = Comment.find(params[:id])
     @comment = comment.destroy
     redirect_to memo_path(params[:memo_id])
