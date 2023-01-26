@@ -43,13 +43,15 @@ a {
 
 }
 .inner {
-  width: 1024px;
+  /* width: 1024px; */
+  width: 100vw;
   margin: 0 auto;
 }
 .nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  padding: 0 30px;
 }
 .logo {
   width: 200px;
@@ -121,7 +123,7 @@ a {
 /* メイン */
 
 .greeting{
-  margin-bottom: 20px;
+  margin: 20px;
 }
 .greeting__link{
   text-decoration: underline;
@@ -279,7 +281,7 @@ a {
 }
 
 /* タブレット対応 */
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
   .inner {
     width: 90%;
     margin: 0 auto;
@@ -294,10 +296,10 @@ a {
   .prototype_image{
     width: 60%;
   }
-}
+} */
 
  /* スマホ表示 */
-@media (max-width: 599px) {
+/* @media (max-width: 599px) {
   .logo {
     width: 120px;
   }
@@ -320,4 +322,86 @@ a {
   .table{
     width: 100%;
   }
+} */
+
+/* 投稿画面 */
+
+.form_main {
+  padding: 15px 0px;
+}
+
+.form_top {
+  margin: 0 15px;
+}
+
+.form_title {
+  display: block;
+  width: 97vw;
+  height: 44px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0 0 0 1px #ccc inset;
+}
+
+.form_tag {
+  display: block;
+  width: 97vw;
+  height: 44px;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0 0 0 1px #ccc inset;
+  
+}
+
+.maintext_area {
+  display: flex;
+  margin: 20px 15px;
+
+}
+
+.main_text {
+  width: 48vw;
+  height: 70vh;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0 0 0 1px #ccc inset;
+}
+
+.main_text_preview {
+  width: 48vw;
+  height: 70vh;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0 0 0 1px #ccc inset;
+}
+
+.maintext_left {
+  padding-right: 1vw;
+
+}
+
+.form_text {
+
+}
+
+.maintext_right {
+
+}
+
+.form_submit{
+  margin: 20px 15px;
+  width: 300px;
+}    
+
+.submit_btn{
+  display: inline-block;
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
 }
