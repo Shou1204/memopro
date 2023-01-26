@@ -1,1 +1,60 @@
-momooooo
+<div class="show-main">
+  <div class="show-contents">
+    <%# 質問内容の表示 %>
+    <div class="show-question">
+      <div class="show-question__title">
+        <%= @memo.title %>
+      </div>
+      <div class="show-question__content">
+        <%= @memo.text %>
+      </div>
+      <div class="show-question__name">
+        <%= @memo.user.name %>
+      </div>
+    </div>
+
+<%
+=begin
+%>
+
+    <%# 回答投稿フォームの表示 %>
+    <div class="show-answer-form">
+      <%= form_with(model: [@memo, @comment], local: true) do |form| %>
+        <div class="show-answer-form__heading">
+          回答する
+        </div>
+        <div class="show-answer-form__content">
+          <%= form.text_area :content, placeholder: "回答する", rows: "4" %>
+        </div>
+        <div class="show-answer-form__name">
+          <%= form.text_field :name, placeholder: "投稿者名" %>
+        </div>
+        <div class="show-answer-form__submit">
+          <%= form.submit "POST" %>
+        </div>
+        <% end %>    
+      </div>
+
+      <%# 回答一覧の表示 %>
+      <div class="show-answers">
+        <div class="answers-heading">
+          いままでの回答：
+        </div>
+        <% @answers.each do |answer| %>
+          <div class="answer-content">
+            <div class="answer-content__text">
+              <%= answer.content %>
+            </div>
+            <div class="answer-content__name">
+              <%= answer.name %>
+            </div>
+          </div>
+        <% end %>
+      </div>  
+  </div>
+
+<%
+=end
+%>
+
+</div>
