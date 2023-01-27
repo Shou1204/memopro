@@ -21,7 +21,7 @@
       <% @memo.comments.each do |comment| %>
         <div class="answer-content">
           <div class="answer-content__text">
-            <%= comment.text %>
+            <%= qiita_markdown(comment.text) %>
           </div>
           <div class="answer-content__name">
             <%= comment.user.name %>
@@ -48,41 +48,6 @@
         </div>
       <% end %>    
     </div>
-    <%# //コメント投稿フォームの表示 %>
-      
+    <%# //コメント投稿フォームの表示 %> 
   </div>
-
-<%
-=begin
-%>
-  <%# コメント表示機能 %>
-  <div id="comments" class="comments">
-  <h4>コメント一覧</h4>
-    <% @memo.comments.each do |comment| %>
-      <div class="comment">
-        <p class="user-info"><%= comment.user.name %>： </p>
-        <p><%= comment.text%></p>
-      </div>
-    <% end %>
-  </div>
-  <%# /コメント表示機能 %>
-  <%# コメント投稿機能 %>
-  <% if user_signed_in? %>
-    <%= form_with model: [@memo, @comment],class:"comment-box", id: "comment-form" do |f| %>
-      <%= f.text_area :text , class: "comment-text"%>
-      <p class="comment-warn">
-        相手のことを考え丁寧なコメントを心がけましょう。<br>
-        不快な言葉遣いなどは利用制限や退会処分となることがあります。
-      </p>
-      <%= button_tag type: :submit, class: "comment-btn" do %>
-        <%= image_tag "comment.png" ,class:"comment-flag-icon" ,width:"20",height:"25"%>
-        コメントをする
-      <% end %>  
-    <% end %>
-  <% end %>
-
-<%
-=end
-%>
-
 </div>
