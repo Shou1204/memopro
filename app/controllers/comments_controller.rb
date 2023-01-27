@@ -14,10 +14,12 @@ class CommentsController < ApplicationController
     flash[:notice] = 'コメントを削除しました'
     redirect_to memo_path(params[:memo_id])
   end
+
   private
 
   def comment_params
     params.require(:comment).permit(:text)
           .merge(user_id: current_user.id, memo_id: params[:memo_id])
   end
+
 end

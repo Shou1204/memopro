@@ -19,10 +19,10 @@
         </div>
         <div class= "maintext_area">
           <div class= "maintext_left">
-            <%= f.text_area :text, class:"main_text", placeholder:"例）タイトル" %>
+            <%= f.text_area :text, id: 'memo-code', class:"main_text", placeholder:"例）タイトル" %>
           </div>
           <div class= "maintext_right">
-            <%= f.text_area :"#", class:"main_text_preview" %> 
+            <%= f.text_area :"#",id: 'preview', class:"main_text_preview" %> 
           </div>
         </div>
         <div class="form_submit">
