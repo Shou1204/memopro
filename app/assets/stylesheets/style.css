@@ -37,7 +37,7 @@ a {
 /* ヘッダー */
 
 .header {
-  background-color: #f1f8fe;
+  background-color: #999999;
   padding: 20px 0;
 
 }
@@ -421,11 +421,22 @@ a {
 .index-main {
   height: 100%;
   background-color: #F2F2F3;
+  background-image: url('paper_00024.png');
+  background-size:auto;
+  
 }
 
 .post-contents {
   width: 700px;
   margin: 0 auto;
+}
+
+.main-contents {
+  width: 700px;
+  margin: 0 auto;
+}
+
+.index-image{
 }
 
 .post-content {
