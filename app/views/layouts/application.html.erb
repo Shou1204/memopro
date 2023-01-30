@@ -5,9 +5,19 @@
     <title>Memopro</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900&display=swap" rel="stylesheet">
+    <%# <-- Vue.js読み込みの記述--> %>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.10/vue.js'></script>
+    <%# <--marked.js読み込みの記述--> %>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/marked/2.0.1/marked.js'></script>
+    <%# <--highlight.js読み込みの記述--> %>
+    <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900&display=swap" rel="stylesheet">
   </head>
 
   <body>

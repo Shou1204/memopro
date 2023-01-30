@@ -20,11 +20,11 @@
         <div class= "maintext_area", id='editor'>
           <div class= "maintext_left">
           <h2 >Memo</h2>
-            <%= f.text_area :text, "v-model" => "input", class:"main_text", placeholder:"例）記録したいことを書きましょう"%>
+            <%= f.text_area :text,id: "input_code", class:"main_text", placeholder:"例）記録したいことを書きましょう"%>
           </div>
           <div class= "maintext_right">
           <h2 >Preview</h2>
-            <div v-html="convertMarkdown", class="main_text_preview" ></div>
+            <div id="code_markdown", class="main_text_preview" ></div>
           </div>
         </div>
         <div class="form_submit">
@@ -33,6 +33,3 @@
       </div>
 
     <% end %>
-    
-  </div>
-</div>
