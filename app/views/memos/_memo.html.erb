@@ -3,11 +3,11 @@
       <div class='post-content'>
         <%# コメントに関する表示 %>
         <div class='comment'>
-          <div class='comment__num'>
-            <%= "0" %>
+          <div class='user_name'>
+            <%= link_to memo.user.name,user_path(memo.user.id) %>
           </div>
-          <div class='comment__unit'>
-            comments
+          <div class="icon-circle">
+          <figure class="icon-circle"><img src="/assets/ch_yusha.png" alt=""></figure>
           </div>
         </div>
         <%# 質問本文の表示 %>
@@ -16,19 +16,28 @@
             <div class="question-top__title">
               <%=link_to memo.title ,memo_path(memo.id) %>
             </div>
-            <div class='question-top__name'>
-              <%= link_to memo.user.name,user_path(memo.user.id) %>
-            </div>
           </div>
           <div class='question-middle'>
             <div class='question-middle__content'>
-              <%= memo.text %>
+              <div class="tag">
+                <%= image_tag "kanban.png"%>
+              </div>
+              <ul class = "tag-lists">
+                <li>rails</li>,
+                <li>日記</li>
+              </ul>
             </div>
           </div>
           <div class='question-bottom'>
-            <div class='question-bottom2'>
+            <div class= "created_at">
               <%= memo.created_at.strftime('%Y/%m/%d %k:%M') %>
+            </div>
+            <div class="favorite_btn">
+              <%= image_tag "heart_empty.png"%>
+              <p class="fukidashi" >お気に入り</P>
             </div>
           </div>
         </div>
       </div>
+
+      

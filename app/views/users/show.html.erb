@@ -1,18 +1,34 @@
 <div class='index-main'>
+  <div class='index-left'>
+    <div class = "memo-box">
+      <div class = "box-title">
+        <%= image_tag url="memocho_01.png" ,size: "20x20" %>
+        <a>メモの一覧</a><br>
+      </div>
+      <div class = "memo-titles">
+        <% @memo.each do |m| %>
+        <div class = memo-title>
+          <%= link_to m.title, memo_path(m.id)%><br>
+        </div>
+        <%end%>
+      </div>
+    </div>
+  </div>
   <div class= "index-image" >
   </div>
   <div class='post-contents'>
     <% if user_signed_in? %>
       <%# ログインしているときは以下を表示する %>
       <div class="greeting"> 
-        こんにちは、
+        
         <%= link_to current_user.name + "さん", class: :greeting__link%>
+        <a>のマイページ</a>
         <%# <%= link_to current_user.name + "さん", user_path(current_user.id), class: :greeting__link%> 
       </div> 
     <% end %>
     <div class="main-contents">
       <%# 投稿機能実装後、部分テンプレートでプロトタイプ投稿一覧を表示する %>
-      <%= render partial: "memos/memo", collection: @memo,locals: {memo: @memo} %>
+      <%= render partial: "memos/memo", collection: @memo.first(5),locals: {memo: @memo} %>
     </div>
   </div>
-</main>
+</div>

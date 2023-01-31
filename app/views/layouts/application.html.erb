@@ -24,22 +24,41 @@
     <header class="header">
       <div class="inner">
         <div class="nav">
-          <div class="nav__left">
+          <div class="nav_left">
             <%= link_to image_tag("logo.png", class: :logo), root_path %>
           </div>
+          <div class="menus">
+            <%= link_to "HOME", root_path, class: "menu" %>
+            <%= link_to "タグ一覧", root_path, class: "menu" %>
+            <%= link_to "マイページ", root_path, class: "menu" %>
+            <%= link_to "HOME", root_path, class: "menu" %>
+          </div>
+          
+          <div class="nav_right">
+           <%# ログインしているときは以下を表示 %>
           <% if user_signed_in? %>
-            <%# ログインしているときは以下を表示 %>
-            <div class="nav__right">
-              <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
-              <%= link_to "投稿する", new_memo_path, method: :get, class: :nav__logout %>
+            <div class = "user_btns">
+              <p class = "p_text">ログアウト</p>
+              <%= link_to image_tag("kanban.png", size: "50x50"), 
+                  destroy_user_session_path, method: :delete, class: "nav_icon"%>
+            </div>
+              <div class = "user_btns">
+              <p class = "p_text" >メモする</p>
+              <%= link_to image_tag("memocho_01.png", size: "50x50"), new_memo_path, method: :get, class: "nav_icon" %>
             </div>
           <% else %>
             <%# ログインしていないときは以下を表示 %>
-            <div class="nav__right">
-              <%= link_to "ログイン", new_user_session_path, class: :nav__btn %>
-              <%= link_to "新規登録", new_user_registration_path, class: :nav__btn %>
+            <div class = "user_btns">
+              <p class = "p_text">ログイン</p>
+              <%= link_to image_tag("ie.png", size: "50x50"), 
+                  new_user_session_path, class: "nav_icon" %>
+            </div>
+            <div class = "user_btns">
+              <p class = "p_text" >新規登録</p>
+              <%= link_to image_tag("book_01_green.png", size: "50x50"), new_user_registration_path, class: "nav_icon" %>
             </div>
           <%end%>
+          </div>
         </div>
       </div>
     </header>
