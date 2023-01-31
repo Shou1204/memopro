@@ -1,5 +1,5 @@
-<main class="index-main">
-  <div class="inner">
+<main class="new-main">
+  <div class="new_inner">
     <% if user_signed_in? %>
       <%# ログインしているときは以下を表示する %>
       <div class="greeting"> 
@@ -8,12 +8,19 @@
         <%# <%= link_to current_user.name + "さん", user_path(current_user.id), class: :greeting__link%> 
       </div> 
     <% end %>
-    
-    <%= form_with model: @memo,method: :post, local: true do |f| %>
+
+    <%= form_with model: @memo,method: :post, id: 'new_post', local: true do |f| %>
 
       <div class="form_main">
-        <div class= "form_top">
-          <%= f.file_field :image ,class: "image_form" %>
+        <div class="image-field">
+          <div class="image-left">
+            <%= f.file_field :image %>
+          </div>
+          <div class="click-upload">
+            <div id="previews"></div>
+          </div>
+        </div>
+        <div class = "form_top">
           <%= f.text_field :title, class:"form_title", placeholder:"例）タイトル" %>
           <%= f.text_field :tag, class:"form_tag", placeholder:"例）タグを入力してください" %>
         </div>
