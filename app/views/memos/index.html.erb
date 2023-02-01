@@ -5,8 +5,7 @@
     <% if user_signed_in? %>
       <%# ログインしているときは以下を表示する %>
       <div class="greeting"> 
-        <a>ようこそ、</a>
-        <%= link_to current_user.name + "さん！", class: :greeting_link%>
+        <a><%= "ようこそ、#{current_user.name}さん！"%></a>
         <%# <%= link_to current_user.name + "さん", user_path(current_user.id), class: :greeting__link%> 
       </div>
     <% end %>

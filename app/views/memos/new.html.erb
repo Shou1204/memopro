@@ -2,8 +2,8 @@
   <div class="new_inner">
     <% if user_signed_in? %>
       <%# ログインしているときは以下を表示する %>
-      <div class="greeting"> 
-        こんにちは、
+      <div class="new-greeting"> 
+        <a>何をメモしますか？</a>
         <%= link_to current_user.name + "さん", class: :greeting__link%>
         <%# <%= link_to current_user.name + "さん", user_path(current_user.id), class: :greeting__link%> 
       </div> 
