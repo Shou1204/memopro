@@ -1,3 +1,5 @@
+
+
 /* リセットCSS */
 * {
   box-sizing: border-box;
@@ -217,12 +219,13 @@ img {
   text-decoration: none;
   color: white;
   font-weight: bold;
-  
+  pointer-events: none;
 }
 
-.greeting_link{
-  
+.greeting a:hover{
+  text-decoration: none;
 }
+
 .page-heading {
   font-size: 30px;
   margin-bottom: 28px;
@@ -485,36 +488,55 @@ img {
   background-size:10%; */
   background-size:auto;
   display: flex;
-  justify-content: center;
 }
 
 .new_inner{
   width: 100%;
   height: 1200px;
-  padding: 0 100px;
+  padding: 0 50px;
 }
 
+.new-greeting{
+  padding: 20px;
+  width:500px;
+  background-color: black;
+  margin: 20px 0;
+  border: solid white;
+  border-radius: 10px;
+}
+
+.new-greeting a{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  
+}
+
+
 .form_main {
-  width: 100%;
+  width: 95%;
   height: 100%;
-  padding: 15px 20px;
+  padding: 20px 50px;
   background-color: #202020;
   border: solid white;
   border-radius: 20px;
 }
 
-.form_main h2{
+.field_name {
   color: white;
+  font-size: 20px;
 }
 
 .image-field{
   width: 100%;
   height: 120px;
+  margin-left: ;
   display: flex;
 }
 .image-left{
   width: 20%;
   color: white;
+  margin-left: 20px;
 }
 
 .click-upload{
@@ -559,6 +581,7 @@ img {
 
 .maintext_area {
   width: 100%;
+  height: 650px;
   display: flex;
   margin: 20px 15px;
 
@@ -566,7 +589,7 @@ img {
 .maintext_left{
   width: 40vw;
   height: 600px;
-
+  padding-right: 1vw;
 }
 
 .main_text {
@@ -579,18 +602,14 @@ img {
 }
 
 .main_text_preview {
-  width: 40vw;
-  height: 70vh;
+  width: 100%;
+  height: 100%;
   border-radius: 4px;
   border: none;
   box-shadow: 0 0 0 1px #ccc inset;
   background-color: #eeeeee;
   padding: 30px;
-}
-
-.maintext_left {
-  padding-right: 1vw;
-
+  color: black;
 }
 
 .form_text {
@@ -598,7 +617,8 @@ img {
 }
 
 .maintext_right {
-
+  width: 40vw;
+  height: 600px;
 }
 
 .form_submit{
@@ -612,10 +632,18 @@ img {
     padding: 8px;
     border: none;
     border-radius: 4px;
-    background-color: #333;
-    color: #fff;
+    background-color:#eeeeee;
+    color: black;
     font-weight: bold;
     -webkit-font-smoothing: antialiased;
+    opacity: 0.8;
+}
+
+.submit_btn:hover{
+ background-color: #00ffff;
+ opacity: 1;
+ transition: 0.5s;
+ text-decoration: underline;
 }
 
 .memo_image {
@@ -700,6 +728,13 @@ img {
 .comment_unit {
   text-decoration: none;
   color: white;
+}
+
+
+.icon-circle{
+  width: 60px;
+  height: 60px;
+  margin: 10px auto;
 }
 
 /* .icon-circle{
@@ -924,143 +959,6 @@ img {
   color: white;
 }
 
-/* ///////////// */
-/* @font-face {
-  font-family: Chunkfive; src: url('Chunkfive.otf');
-}
-
-body, .usertext {
-  color: #F0F0F0; background: #600;
-  font-family: Chunkfive, sans;
-  --heading-1: 30px/32px Helvetica, sans-serif;
-}
-
-@import url(print.css);
-@media print {
-  a[href^=http]::after {
-    content: attr(href)
-  }
-} */
-
-pre code.hljs {
-  display: block;
-  overflow-x: auto;
-  padding: 1em;
-}
-
-code.hljs {
-  padding: 3px 5px;
-}
-/* end baseline CSS */
-
-.hljs {
-  background: #F3F3F3;
-  color: #444;
-}
-
-/* Base color: saturation 0; */
-
-.hljs-subst {
-  /* default */
-}
-
-/* purposely ignored */
-.hljs-formula,
-.hljs-attr,
-.hljs-property,
-.hljs-params {}
-
-.hljs-comment {
-  color: #697070;
-}
-.hljs-tag,
-.hljs-punctuation {
-  color: #444a;
-}
-
-.hljs-tag .hljs-name,
-.hljs-tag .hljs-attr {
-  color: #444;
-}
-
-
-.hljs-keyword,
-.hljs-attribute,
-.hljs-selector-tag,
-.hljs-meta .hljs-keyword,
-
-.hljs-doctag,
-.hljs-name {
-  font-weight: bold;
-}
-
-
-/* User color: hue: 0 */
-
-.hljs-type,
-.hljs-string,
-.hljs-number,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-quote,
-.hljs-template-tag,
-.hljs-deletion {
-  color: #880000;
-}
-
-.hljs-title,
-.hljs-section {
-  color: #880000;
-  font-weight: bold;
-}
-
-.hljs-regexp,
-.hljs-symbol,
-.hljs-variable,
-.hljs-template-variable,
-.hljs-link,
-.hljs-selector-attr,
-.hljs-operator,
-.hljs-selector-pseudo {
-  color: #ab5656;
-}
-
-/* Language color: hue: 90; */
-
-.hljs-literal {
-  color: #695;
-}
-
-.hljs-built_in,
-.hljs-bullet,
-.hljs-code,
-.hljs-addition {
-  color: #397300;
-}
-
-
-/* Meta color: hue: 200 */
-
-.hljs-meta {
-  color: #1f7199;
-}
-
-.hljs-meta .hljs-string {
-  color: #38a;
-}
-
-
-/* Misc effects */
-
-.hljs-emphasis {
-  font-style: italic;
-}
-
-.hljs-strong {
-  font-weight: bold;
-}
-
-
 /*//////////////ハイライトjsの設定/////////////// */
 
 .pre code.hljs {
@@ -1074,8 +972,15 @@ code.hljs {
 }
 /* end baseline CSS */
 
+code {
+  background: #e0e0e0;
+  color: red;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
 .hljs {
-  background: #ffefe0;
+  background: #89c4ff;
   color: #444;
   border-radius: 4px;
 }
@@ -1180,4 +1085,14 @@ code.hljs {
 
 .hljs-strong {
   font-weight: bold;
+}
+
+
+/* ////////////////////////////////////////////
+            bootstrap打ち消しの記述
+///////////////////////////////////////////// */
+
+.a:hover {
+  color: red;
+  text-decoration: underline;
 }
