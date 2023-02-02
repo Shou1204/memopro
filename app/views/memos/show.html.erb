@@ -1,53 +1,78 @@
 <div class="show-main">
   <div class="show-contents">
-    <%# 質問内容の表示 %>
-    <div class="show-question">
-      <div class="show-question__title">
-        <%= @memo.title %>
-      </div>
-      <div class="show-question__content">
-        <%= qiita_markdown(@memo.text) %>
-      </div>
-      <div class="show-question__name">
-        <%= @memo.user.name %>
+    <div class="show-contents-l">
+      <div class="memo-status-box">
+        <div class="show-memo_name">
+            <p><%= "#{@memo.user.name}さんのメモです" %></p>
+        </div>
+        <div class="icon-circle">
+          <%= link_to image_tag("ch_yusha.png", size: "50x50"), user_path(@memo.user.id), method: :get, class: "icon-circle" %>
+        </div>
+        <div class="show-memo-tag">
+            <p>タグ： rails 、日記</p>
+          </div>
       </div>
     </div>
-
-    <%# コメント一覧の表示 %>
-    <div class="show-answers">
-      <div class="answers-heading">
-        コメント一覧：
-      </div>
-      <% @memo.comments.each do |comment| %>
-        <div class="answer-content">
-          <div class="answer-content__text">
-            <%= qiita_markdown(comment.text) %>
+    <div class="show-contents-m">
+      <div class="show-memos">
+        <%# メモの中身%>
+        <div class="show-memo">
+          <div class="show-memo-title">
+            <%= @memo.title %>
           </div>
-          <div class="answer-content__name">
-            <%= comment.user.name %>
+          <div class="created_at">
+            <%= @memo.created_at.strftime('%Y/%m/%d %k:%M')  %>
           </div>
-          <div class="comment-destroy">
-          <% if comment.user.id == current_user.id %>
-            <%= link_to "削除" ,"/memos/#{@memo.id}/comments/#{comment.id}", method: :DELETE %>
+          <% if @memo.image.present? %>
+          <div class="show-image-area">
+            <%= image_tag @memo.image, class:"show-memo-image" %>
+          </div>
           <% end %>
+          <div class="show-memo-text">
+            <%= qiita_markdown(@memo.text) %>
           </div>
         </div>
-      <% end %>
-    </div>  
-    <%# //コメント一覧の表示 %>
-    <%# コメント投稿フォームの表示 %>
-    <div class="show-answer-form">
-      <%= form_with(model: [@memo, @comment], local: true) do |form| %>
-        <div class="show-answer-form__heading">
-        </div>
-        <div class="show-answer-form__content">
-          <%= form.text_area :text, placeholder: "コメントを記入", rows: "4" %>
-        </div>
-        <div class="show-answer-form__submit">
-          <%= form.submit "POST" %>
-        </div>
-      <% end %>    
+      </div>
     </div>
-    <%# //コメント投稿フォームの表示 %> 
+    <div class="show-contents-r">
+      <%# コメント一覧の表示 %>
+      <div class="show-answers">
+        <div class="answers-heading">
+          コメント一覧
+        </div>
+        <div class="comment-box">
+        <% @memo.comments.each do |comment| %>
+              <div class="comment_name">
+                <%= comment.user.name %>
+              </div>
+              <div class="comment_text">
+                <%= qiita_markdown(comment.text) %>
+              </div>
+              <div class="comment-destroy">
+                <% if comment.user.id == current_user.id %>
+                  <%= link_to image_tag("gomibako_futa.png", size: "20x20") ,"/memos/#{@memo.id}/comments/#{comment.id}", method: :DELETE %>
+                <% end %>
+              </div>
+            
+          
+        <% end %>
+        </div>
+        <%# //コメント一覧の表示 %>
+        <%# コメント投稿フォームの表示 %>
+        <div class="show-answer-form">
+          <%= form_with(model: [@memo, @comment], local: true) do |form| %>
+            <div class="show-answer-form__heading">
+            </div>
+            <div class="show-answer-form__content">
+              <%= form.text_area :text, placeholder: "マークダウン対応", rows: "4" %>
+            </div>
+          <div class="show-answer-form__submit">
+            <%= form.submit "コメントする" %>
+          </div>
+        <% end %>    
+        </div>
+        <%# //コメント投稿フォームの表示 %> 
+      </div>
+    </div>
   </div>
 </div>
