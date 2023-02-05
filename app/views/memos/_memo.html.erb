@@ -7,7 +7,7 @@
             <%= link_to memo.user.name,user_path(memo.user.id) %>
           </div>
           <div class="icon-circle">
-          <figure class="icon-circle"><img src="/assets/ch_yusha.png" alt=""></figure>
+            <%= link_to image_tag("ch_yusha.png", size: "50x50"), user_path(memo.user.id), method: :get, class: "icon-circle" %>
           </div>
         </div>
         <%# 質問本文の表示 %>
