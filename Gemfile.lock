@@ -282,7 +282,6 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   devise
-  github-linguist
   image_processing (~> 1.2)
   jbuilder (~> 2.7)
   listen (>= 3.0.5, < 3.2)
