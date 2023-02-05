@@ -6,7 +6,11 @@
       <%# ログインしているときは以下を表示する %>
       <div class="greeting"> 
         <a><%= "ようこそ、#{current_user.name}さん！"%></a>
-        <%# <%= link_to current_user.name + "さん", user_path(current_user.id), class: :greeting__link%> 
+      </div>
+    <% else %>
+       <%# ログインしているときは以下を表示する %>
+      <div class="greeting"> 
+        <a><%= "ようこそ、ゲストさん！　　ログインしてね！　　それとも新規で登録する？" %></a>
       </div>
     <% end %>
     <div class="main-contents">

@@ -17,13 +17,16 @@
   <div class= "index-image" >
   </div>
   <div class='post-contents'>
-    <% if user_signed_in? %>
+
+    <% if user_signed_in? && current_user.id == @user.id %>
       <%# ログインしているときは以下を表示する %>
       <div class="greeting"> 
-        
         <%= link_to current_user.name + "さん", class: :greeting__link%>
-        <a>のマイページ</a>
-        <%# <%= link_to current_user.name + "さん", user_path(current_user.id), class: :greeting__link%> 
+        <a>、おかえりなさい</a>
+      </div> 
+    <% else %>
+      <div class="greeting"> 
+        <a><%= "#{@user.name}さんのマイページ" %></a>
       </div> 
     <% end %>
     <div class="main-contents">
