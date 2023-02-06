@@ -9,7 +9,7 @@
           <%= link_to image_tag("ch_yusha.png", size: "50x50"), user_path(@memo.user.id), method: :get, class: "icon-circle" %>
         </div>
         <div class="show-memo-tag">
-            <p>タグ： rails 、日記</p>
+            <p>タグ：<%= @memo.tags.first&.tag_name %></p>
           </div>
       </div>
     </div>
