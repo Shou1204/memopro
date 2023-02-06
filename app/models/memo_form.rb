@@ -2,9 +2,7 @@ class MemoForm
   include ActiveModel::Model
 
   attr_accessor(
-    :title, :text, :user_id, :image, :id, :created_at, :updated_at,
-    :tag
-    )
+    :title, :text, :user_id, :image,  :id, :created_at, :updated_at, :tag_name)
 
   with_options presence: true do
     validates :title
@@ -13,6 +11,13 @@ class MemoForm
   end
 
   def save
-    Memo.create(title: title, text: text, image: image, user_id: user_id)
+    memo = Memo.create(title: title, text: text, image: image, user_id: user_id)
+    tag = Tag.where(tag_name: tag_name).first_or_initialize
+    tag.save
+    MemoTag.create(memo_id: memo.id, tag_id: tag.id)
+  end
+
+  def update(params, memo)
+    post.update(params)
   end
 end

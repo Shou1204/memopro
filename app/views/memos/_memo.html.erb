@@ -23,8 +23,8 @@
                 <%= image_tag "kanban.png"%>
               </div>
               <ul class = "tag-lists">
-                <li>rails</li>,
-                <li>日記</li>
+                <li>日記</li>,
+                <li><%= memo.tags.first&.tag_name %></li>
               </ul>
             </div>
           </div>
