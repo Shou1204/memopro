@@ -1,7 +1,10 @@
 class MemoForm
   include ActiveModel::Model
 
-  attr_accessor :title, :text, :user_id, :image
+  attr_accessor(
+    :title, :text, :user_id, :image, :id, :created_at, :updated_at,
+    :tag
+    )
 
   with_options presence: true do
     validates :title
