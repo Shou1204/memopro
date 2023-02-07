@@ -6,7 +6,7 @@
             <p><%= "#{@memo.user.name}さんのメモです" %></p>
         </div>
         <div class="icon-circle">
-          <%= link_to image_tag("ch_yusha.png", size: "50x50"), user_path(@memo.user.id), method: :get, class: "icon-circle" %>
+          <%= link_to image_tag(@memo.user.avatar.icon, size: "50x50"), user_path(@memo.user.id), method: :get, class: "icon-circle" %>
         </div>
         <div class="show-memo-tag">
             <p>タグ：<%= @memo.tags.first&.tag_name %></p>
