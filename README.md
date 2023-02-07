@@ -118,15 +118,16 @@ https://memopro.onrender.com
 
 - レスポンシブルなview
 ![gif](index.gif)
+
 <a id="anchor10"></a>
 
 <br />
 
 # 実装予定の機能（2022.2.5）
-- タグ機能
+- タグ機能（2022.2.7に一部実装）
 - フォロー機能
 - お気に入りメモ機能
-- アバター機能：ユーザーがアバターを選択できる
+- アバター機能：ユーザーがアバターを選択できる（2022.2.7に実装）
 - アチーブメントシステム：メモ投稿数やログイン日数などの条件を満たすと報酬がもらえる（アバター解禁など）
 
 <br />
@@ -199,6 +200,7 @@ https://memopro.onrender.com
 | email              | string | null: false, unique: true  |
 | encrypted_password | string | null: false                |
 | name               | string | null: false, unique: true  |
+| avatar_id          | integer | null: false               |
 
 ### Association
 
@@ -212,7 +214,7 @@ https://memopro.onrender.com
 
 | Column     | Type       | Options                        |
 | ---------- | ---------- | ------------------------------ |
-| tag              | string     | null: false, unique: true|
+| tag_name              | string     | null: false, unique: true|
 
 
 

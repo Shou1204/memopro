@@ -6,4 +6,10 @@ class User < ApplicationRecord
 
   has_many :memos
   has_many :comments
+
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to :avatar
+
+  validates :avatar_id, numericality: { other_than: 1 } 
+
 end
