@@ -24,18 +24,16 @@ class MemosController < ApplicationController
   end
 
   def edit
+    @memo = Memo.find(params[:id])
     memo_attributes = @memo.attributes
     @memo_form = MemoForm.new(memo_attributes)
   end
 
   def update
-    @memo_form = MemoForm.new(memo_form_params)
-
-    # 画像を選択し直していない場合は、既存の画像をセットする
-    @memo_form.image ||= @memo.image.blob
-
+    @memo = Memo.find(params[:id])
+    @memo_form = MemoForm.new(memo_form_params_up)
     if @memo_form.valid?
-      @memo_form.update(memo_form_params, @memo)
+      @memo_form.update(memo_form_params_up, @memo)
       redirect_to root_path
     else
       render :edit
@@ -47,5 +45,10 @@ class MemosController < ApplicationController
 
   def memo_form_params
     params.require(:memo_form).permit(:title, :text, :image, :tag_name).merge(user_id: current_user.id)
+  end
+
+  # タグの保存ができないので一時的な記述
+  def memo_form_params_up
+    params.require(:memo_form).permit(:title, :text, :image).merge(user_id: current_user.id)
   end
 end

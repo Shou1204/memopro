@@ -17,6 +17,11 @@
       <div class="show-memos">
         <%# メモの中身%>
         <div class="show-memo">
+          <% if current_user == @memo.user %>
+          <div class="show-memo-editbtn">
+            <%= link_to "編集する", edit_memo_path(@memo.id), method: :get, class: "icon-circle" %>
+          </div>
+          <% end %>
           <div class="show-memo-title">
             <%= @memo.title %>
           </div>
