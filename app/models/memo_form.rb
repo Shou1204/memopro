@@ -18,6 +18,6 @@ class MemoForm
   end
 
   def update(params, memo)
-    post.update(params)
+    memo.update(params)
   end
 end
