@@ -20,6 +20,7 @@
           <% if current_user == @memo.user %>
           <div class="show-memo-editbtn">
             <%= link_to "編集する", edit_memo_path(@memo.id), method: :get, class: "icon-circle" %>
+            <%= link_to "削除する", memo_path(@memo.id), method: :delete, class: "icon-circle", data: {confirm: "ほんとうに削除しますか？"}  %>
           </div>
           <% end %>
           <div class="show-memo-title">
