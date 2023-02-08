@@ -1,6 +1,7 @@
 class MemosController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit, :destroy]
   before_action :set_memo, only: [:show, :edit, :update, :destroy]
+  before_action :move_to_index, only: [:edit]
 
   def index
     @memo = Memo.all.includes(:user).order("created_at DESC")
@@ -61,4 +62,11 @@ class MemosController < ApplicationController
   def memo_form_params_up
     params.require(:memo_form).permit(:title, :text, :image).merge(user_id: current_user.id)
   end
+
+  def move_to_index
+    unless current_user == @memo.user
+      redirect_to root_path
+    end
+  end
+  
 end
