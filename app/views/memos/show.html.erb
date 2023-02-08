@@ -64,20 +64,26 @@
         <% end %>
         </div>
         <%# //コメント一覧の表示 %>
-        <%# コメント投稿フォームの表示 %>
-        <div class="show-answer-form">
-          <%= form_with(model: [@memo, @comment], local: true) do |form| %>
-            <div class="show-answer-form__heading">
-            </div>
-            <div class="show-answer-form__content">
-              <%= form.text_area :text, placeholder: "マークダウン対応", rows: "4" %>
-            </div>
-          <div class="show-answer-form__submit">
-            <%= form.submit "コメントする" %>
+        <% if user_signed_in?%>
+          <%# コメント投稿フォームの表示 %>
+          <div class="show-answer-form">
+            <%= form_with(model: [@memo, @comment], local: true) do |form| %>
+              <div class="show-answer-form__heading">
+              </div>
+              <div class="show-answer-form__content">
+                <%= form.text_area :text, placeholder: "マークダウン対応", rows: "4" %>
+              </div>
+              <div class="show-answer-form__submit">
+                <%= form.submit "コメントする" %>
+              </div>
+            <% end %>  
           </div>
-        <% end %>    
+          <%# //コメント投稿フォームの表示 %>
+        <% else %>
+        <div class="answers-heading">
+          <br>コメントするにはログインしてください
         </div>
-        <%# //コメント投稿フォームの表示 %> 
+        <% end %>
       </div>
     </div>
   </div>
