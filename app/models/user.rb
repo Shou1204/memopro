@@ -10,6 +10,8 @@ class User < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :avatar
 
-  validates :avatar_id, numericality: { other_than: 1 } 
-
+  validates :name,      presence: true
+  validates :avatar_id, presence: true
+  validates :avatar_id, numericality: { other_than: 1, message: 'アバターを選択してください' } 
+  
 end
