@@ -31,7 +31,6 @@ img {
   vertical-align: bottom;
 }
 
-
 /* ヘッダー */
 
 .header {
@@ -41,7 +40,6 @@ img {
   width: 100vw;
   border: solid white;
   border-radius: 10px;
-
 }
 .inner {
   /* width: 1024px; */
@@ -56,10 +54,9 @@ img {
   padding: 0 30px;
 }
 
-.nav_left{
+.nav_left {
   width: 30%;
 }
-
 
 .logo {
   width: 200px;
@@ -70,78 +67,76 @@ img {
   opacity: 0.5;
 }
 
-.nav_right{
+.nav_right {
   display: flex;
   text-align: center;
   width: 30vw;
   padding-left: 15vw;
 }
 
-.user_btns{
+.user_btns {
   height: 100%;
   width: 100px;
   display: block;
   align-items: center;
 }
 
-.memo_new{
+.memo_new {
   height: 100%;
   width: 100px;
   display: block;
   align-items: center;
 }
 
-.nav_icon img{
+.nav_icon img {
   margin-left: 6px;
   opacity: 0.8;
 }
 
-.nav_right p{
+.nav_right p {
   color: white;
   margin-bottom: 5px;
   font-size: 12px;
 }
 
 .user_btns img:hover {
-  transform: rotateY( 360deg );
+  transform: rotateY(360deg);
   transition-duration: 0.5s;
   opacity: 1;
 }
 
-
-
-.nav__btn{
+.nav__btn {
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
-  color: #87CEFA;
+  color: #87cefa;
   text-decoration: none;
   user-select: none;
-  border: 1px #87CEFA solid;
+  border: 1px #87cefa solid;
   border-radius: 3px;
   transition: 0.4s ease;
 }
-.nav__btn:hover{
+.nav__btn:hover {
   color: #fff;
-  background: #87CEFA;
+  background: #87cefa;
 }
 
-.nav__logout{
+.nav__logout {
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
-  color: #87CEFA;
+  color: #87cefa;
   text-decoration: none;
   user-select: none;
 }
-.nav__logout:hover{
+.nav__logout:hover {
   opacity: 0.5;
 }
 
 .menus {
   width: 40%;
   display: flex;
-  align-items:flex-end;
+  align-items: flex-end;
   justify-content: space-between;
   margin-right: 100px;
 }
@@ -151,26 +146,25 @@ img {
   font-size: 16px;
   text-decoration: none;
   margin-bottom: 10px;
-  font-family: "Meiryo" ;
+  font-family: "Meiryo";
   border-style: solid;
   border-radius: 5px;
   padding: 4px;
 }
 
 .menu:hover {
-  
   color: blue;
-  transition: all  0.8s ease;
-  margin-top:4px;
+  transition: all 0.8s ease;
+  margin-top: 4px;
   margin-bottom: 15px;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
   -webkit-transition: all 0.8s ease;
-    -moz-transition: all 0.8s ease;
-    -o-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
 }
 
 /* フォーム周り */
-.form__wrapper{
+.form__wrapper {
   min-height: calc(100vh - 161px);
 }
 
@@ -178,23 +172,23 @@ img {
   width: 50%;
 }
 
-.field{
+.field {
   margin: 10px 0;
 }
 
-.actions{
+.actions {
   margin-bottom: 40px;
 }
 
-.form__btn{
+.form__btn {
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
   color: #fff;
   text-decoration: none;
   user-select: none;
-  background: #87CEFA;
-  border: 1px #87CEFA solid;
+  background: #87cefa;
+  border: 1px #87cefa solid;
   border-radius: 3px;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
   transition: 0.2s ease;
@@ -209,22 +203,22 @@ img {
   メイン
 *********************************************/
 
-.greeting{
+.greeting {
   padding: 20px;
-  background-color:#202020;
+  background-color: #202020;
   margin: 20px;
   border: solid white;
   border-radius: 10px;
 }
 
-.greeting a{
+.greeting a {
   text-decoration: none;
   color: white;
   font-weight: bold;
   pointer-events: none;
 }
 
-.greeting a:hover{
+.greeting a:hover {
   text-decoration: none;
 }
 
@@ -265,42 +259,42 @@ img {
 }
 
 /* 詳細ページ */
-.prototype__wrapper{
+.prototype__wrapper {
   min-height: calc(100vh - 161px);
 }
-.prototype__hedding{
+.prototype__hedding {
   font-size: 24px;
   font-weight: bold;
   text-align: center;
 }
-.prototype__user{
+.prototype__user {
   display: block;
   font-size: 16px;
   color: #999;
   text-align: center;
   text-decoration: underline;
 }
-.prototype__image{
+.prototype__image {
   width: 40%;
   margin: 0 auto;
   padding: 16px 0;
 }
-.prototype__detail{
+.prototype__detail {
   display: flex;
   align-items: center;
   flex-direction: column;
   margin-bottom: 8px;
 }
-.detail__title{
+.detail__title {
   font-size: 20px;
   font-weight: bold;
 }
-.prototype__manage{
+.prototype__manage {
   display: flex;
   justify-content: center;
   padding-top: 16px;
 }
-.prototype__btn{
+.prototype__btn {
   display: block;
   padding: 0.4em 1.6em;
   font-size: 0.4em;
@@ -312,28 +306,28 @@ img {
   transition: 0.4s ease;
   margin: 0 4px;
 }
-.prototype__btn:hover{
+.prototype__btn:hover {
   color: #fff;
   background: #999;
 }
 
-.prototype__comments{
+.prototype__comments {
   background-color: #f6f6f6;
-  border:solid white;
+  border: solid white;
   padding: 20px;
   margin: 28px 0 40px 0;
 }
 
-.comments_lists{
+.comments_lists {
   padding-left: 20px;
 }
 
-.comments_list{
+.comments_list {
   list-style-type: square;
   padding-bottom: 5px;
 }
 
-.comment_user{
+.comment_user {
   font-size: 16px;
   color: #999;
   text-decoration: underline;
@@ -343,36 +337,34 @@ img {
   ユーザーページ
 *********************************************/
 
-.index-left{
+.index-left {
   background-image: url(tex_renga.png);
-  background-repeat:repeat;
-  background-size:10%;
-  width:25%;
+  background-repeat: repeat;
+  background-size: 10%;
+  width: 25%;
   background-color: rgb(0, 59, 25);
   padding: 40px;
 }
 
-.memo-box{
+.memo-box {
   /* background-image: url(paper3.jpg); */
   background-color: black;
   border-radius: 20px;
   border: solid white;
 }
 
-.box-title{
+.box-title {
   padding: 30px;
 }
 
-.box-title a{
+.box-title a {
   font-weight: bold;
   font-size: 18px;
   margin-left: 10px;
   color: white;
-  
 }
 
-
-.memo-titles{
+.memo-titles {
   padding: 30px;
 }
 
@@ -380,25 +372,25 @@ img {
   margin-bottom: 10px;
 }
 
-.memo-titles a{
+.memo-titles a {
   text-decoration: none;
   color: white;
 }
 
-.memo-titles a:hover{
+.memo-titles a:hover {
   text-decoration: underline;
   margin-left: 20px;
 }
 
-.user__wrapper{
+.user__wrapper {
   min-height: calc(100vh - 161px);
 }
-.table{
+.table {
   border-collapse: collapse;
   margin-bottom: 32px;
   width: 50%;
 }
-.table__col1{
+.table__col1 {
   text-align: left;
   font-weight: bold;
   background: #fafafa;
@@ -407,7 +399,7 @@ img {
   width: 30%;
   padding: 8px;
 }
-.table__col2{
+.table__col2 {
   text-align: left;
   border: 1px solid #f5f5f5;
   border-collapse: collapse;
@@ -441,7 +433,6 @@ img {
   font-size: 14px;
 }
 
-
 /* タブレット対応 */
 /* @media (max-width: 1024px) {
   .inner {
@@ -460,7 +451,7 @@ img {
   }
 } */
 
- /* スマホ表示 */
+/* スマホ表示 */
 /* @media (max-width: 599px) {
   .logo {
     width: 120px;
@@ -489,38 +480,36 @@ img {
 /******************************************** 
   投稿画面
 *********************************************/
-.new-main{
+.new-main {
   height: 100%;
-  background-color: #F2F2F3;
-  background-image: url('paper4.jpg');
+  background-color: #f2f2f3;
+  background-image: url("paper4.jpg");
   /* background-repeat:repeat;
   background-size:10%; */
-  background-size:auto;
+  background-size: auto;
   display: flex;
 }
 
-.new_inner{
+.new_inner {
   width: 100%;
   height: 1200px;
   padding: 0 50px;
 }
 
-.new-greeting{
+.new-greeting {
   padding: 20px;
-  width:500px;
+  width: 500px;
   background-color: black;
   margin: 20px 0;
   border: solid white;
   border-radius: 10px;
 }
 
-.new-greeting a{
+.new-greeting a {
   text-decoration: none;
   color: white;
   font-weight: bold;
-  
 }
-
 
 .form_main {
   width: 95%;
@@ -536,24 +525,23 @@ img {
   font-size: 20px;
 }
 
-.image-field{
+.image-field {
   width: 100%;
   height: 120px;
   display: flex;
 }
-.image-left{
+.image-left {
   width: 20%;
   color: white;
   margin-left: 20px;
 }
 
-.click-upload{
-  
+.click-upload {
 }
 
-.click-upload img{
+.click-upload img {
   padding: 10px;
-  width:120px;
+  width: 120px;
   height: 120px;
   object-fit: contain;
   background-color: #202020;
@@ -563,7 +551,7 @@ img {
 
 .form_top {
   margin: 0 15px;
-  margin: auto ;
+  margin: auto;
   padding: 20px 20px;
 }
 
@@ -584,7 +572,6 @@ img {
   border-radius: 4px;
   border: none;
   box-shadow: 0 0 0 1px #ccc inset;
-  
 }
 
 .maintext_area {
@@ -592,9 +579,8 @@ img {
   height: 650px;
   display: flex;
   margin: 20px 15px;
-
 }
-.maintext_left{
+.maintext_left {
   width: 40vw;
   height: 600px;
   padding-right: 1vw;
@@ -621,7 +607,6 @@ img {
 }
 
 .form_text {
-
 }
 
 .maintext_right {
@@ -629,29 +614,29 @@ img {
   height: 600px;
 }
 
-.form_submit{
+.form_submit {
   margin: 20px 15px;
   width: 300px;
-}    
-
-.submit_btn{
-  display: inline-block;
-    width: 100%;
-    padding: 8px;
-    border: none;
-    border-radius: 4px;
-    background-color:#eeeeee;
-    color: black;
-    font-weight: bold;
-    -webkit-font-smoothing: antialiased;
-    opacity: 0.8;
 }
 
-.submit_btn:hover{
- background-color: #00ffff;
- opacity: 1;
- transition: 0.5s;
- text-decoration: underline;
+.submit_btn {
+  display: inline-block;
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  background-color: #eeeeee;
+  color: black;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  opacity: 0.8;
+}
+
+.submit_btn:hover {
+  background-color: #00ffff;
+  opacity: 1;
+  transition: 0.5s;
+  text-decoration: underline;
 }
 
 .memo_image {
@@ -667,11 +652,11 @@ img {
 *********************************************/
 .index-main {
   height: 100vh;
-  background-color: #F2F2F3;
-  background-image: url('paper4.jpg');
+  background-color: #f2f2f3;
+  background-image: url("paper4.jpg");
   /* background-repeat:repeat;
   background-size:10%; */
-  background-size:auto;
+  background-size: auto;
   display: flex;
 }
 
@@ -679,17 +664,14 @@ img {
   width: 900px;
   height: 100%;
   margin: 0 auto;
-  
 }
-
-
 
 .main-contents {
   width: 900px;
   margin: 0 auto;
 }
 
-.index-image{
+.index-image {
 }
 
 .post-content {
@@ -703,16 +685,15 @@ img {
 .post-content:hover {
   margin-left: 10px;
   border-radius: 0px 20px 20px 0px;
-  transition: all  1s ease;
+  transition: all 1s ease;
 }
-
 
 .comment {
   width: 150px;
   height: 100%;
   background-color: #202020;
   border-radius: 10px 0 0 10px;
-  border:solid white;
+  border: solid white;
 }
 
 .user_name {
@@ -724,13 +705,13 @@ img {
   text-align: center;
 }
 
-.user_name a{
+.user_name a {
   text-decoration: none;
   color: white;
 }
 
-.user_name a:hover{
-  text-decoration:underline;
+.user_name a:hover {
+  text-decoration: underline;
 }
 
 .comment_unit {
@@ -738,8 +719,7 @@ img {
   color: white;
 }
 
-
-.icon-circle{
+.icon-circle {
   width: 60px;
   height: 60px;
   margin: 10px auto;
@@ -749,9 +729,9 @@ img {
   width: 100%;
   height: 100%;
   padding: 10px 15px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 0px 5px 5px 0px;
-  background-image: url('paper.jpg');
+  background-image: url("paper.jpg");
 }
 
 .question-top {
@@ -796,18 +776,18 @@ img {
 }
 
 .tag {
-  height:20px;
-  width:20px;
+  height: 20px;
+  width: 20px;
   margin-right: 5px;
 }
 
-.tag-lists li{
+.tag-lists li {
   display: inline;
   font-size: 14px;
   margin-right: 5px;
 }
 
-.tag-lists li:hover{
+.tag-lists li:hover {
   text-decoration: underline;
 }
 
@@ -823,8 +803,8 @@ img {
 }
 
 .favorite_btn {
-  height:25px;
-  width:25px;
+  height: 25px;
+  width: 25px;
   opacity: 0.5;
 }
 
@@ -834,7 +814,7 @@ img {
 
 .favorite_btn:hover .fukidashi {
   display: block;
-  width:30px;
+  width: 30px;
 }
 
 .fukidashi {
@@ -850,25 +830,25 @@ img {
 .show-main {
   width: 100vw;
   height: 1000px;
-  background-image: url('paper4.jpg');
+  background-image: url("paper4.jpg");
   display: flex;
   text-align: center;
 }
 
 .show-contents {
-  width:100vw;
+  width: 100vw;
   height: 100%;
   padding-top: 20px;
   display: flex;
   justify-content: center;
 }
 
-.show-contents-l{
+.show-contents-l {
   width: 20vw;
   height: 90%;
 }
 
-.memo-status-box{
+.memo-status-box {
   width: 100%;
   height: auto;
   padding: 30px;
@@ -878,26 +858,26 @@ img {
   border-radius: 20px;
 }
 
-.show-memo_name p{
+.show-memo_name p {
   color: white;
   font-weight: bold;
 }
 
-.show-contents-m{
+.show-contents-m {
   width: 50vw;
   height: 90%;
 }
 
-.show-memos{
+.show-memos {
   width: 90%;
   height: 90%;
   margin: auto;
   margin-top: 10px;
   border-radius: 10px;
-  background-image: url('paper.jpg');
+  background-image: url("paper.jpg");
 }
 
-.show-memo{
+.show-memo {
   width: 100%;
   height: 100%;
   padding: 20px;
@@ -915,17 +895,17 @@ img {
   margin-right: 30px;
 }
 
-.show-image-area{
+.show-image-area {
   margin: 0 auto;
 }
 
-.show-memo-image{
+.show-memo-image {
   max-width: 200px;
   border-radius: 5px;
   border: solid white;
 }
 
-.show-memo-tag{
+.show-memo-tag {
   font-size: 15px;
   color: white;
   margin-top: 20px;
@@ -938,31 +918,31 @@ img {
   text-align: left;
 }
 
-.show-contents-r{
+.show-contents-r {
   width: 35vw;
   height: 90%;
 }
 
 .show-answers {
   width: 90%;
-  background-color:#202020;
+  background-color: #202020;
   padding: 20px;
   border-radius: 10px;
   border: solid white;
 }
 
-.comment-box{
-  background-color:#FFFFFF;
+.comment-box {
+  background-color: #ffffff;
   border-radius: 10px;
 }
-.comment_name{
-  padding: 10px  0 0 20px;
+.comment_name {
+  padding: 10px 0 0 20px;
   text-align: left;
   font-weight: bold;
   text-decoration: underline;
 }
 
-.comment_text{
+.comment_text {
   margin-left: 20px;
   text-align: left;
   font-size: 14px;
@@ -975,17 +955,16 @@ img {
   color: black;
 }
 
-.comment-destroy a{
+.comment-destroy a {
   opacity: 0.7;
 }
 
-.comment-destroy img:hover{
+.comment-destroy img:hover {
   opacity: 1;
   transition: 0.5s;
-  transform: rotateY( 180deg );
+  transform: rotateY(180deg);
   transition-duration: 0.5s;
 }
-
 
 .question-bottom {
   font-size: 12px;
@@ -1002,7 +981,7 @@ img {
   padding: 20px 15px 20px 15px;
   margin-bottom: 50px;
   border-radius: 3px;
-  border: 1px solid #3A3736;
+  border: 1px solid #3a3736;
 }
 
 .show-answer-form__heading {
@@ -1020,22 +999,21 @@ img {
   padding: 5px;
   width: 100%;
   border-radius: 5px;
-  border: 1px solid #A0A0A0;
+  border: 1px solid #a0a0a0;
 }
-
 
 .show-answer-form__submit {
   width: 100%;
   height: 36px;
 }
 
-.show-answer-form__submit input[type='submit'] {
+.show-answer-form__submit input[type="submit"] {
   width: 100%;
   height: 100%;
   border-radius: 5px;
-  background-color: #1C3667;
+  background-color: #1c3667;
   font-size: 18px;
-  color: #FFFFFF;
+  color: #ffffff;
   border: none;
 }
 
@@ -1051,33 +1029,33 @@ img {
 .main {
   width: 100vw;
   height: 100vh;
-  background-image: url('paper4.jpg');
+  background-image: url("paper4.jpg");
   display: flex;
   justify-content: center;
 }
 
 .devise_inner {
   text-align: center;
-  background-color:#A0A0A0;
+  background-color: #a0a0a0;
   width: 400px;
   height: 700px;
   margin-top: 40px;
   border-radius: 15px;
-  border:solid white;
+  border: solid white;
 }
 
 .form_wrapper {
   padding: 30px;
 }
 
-.devise_btn{
+.devise_btn {
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
   color: #fff;
   text-decoration: none;
   user-select: none;
-  background:#202020;
+  background: #202020;
   border: 1px white solid;
   border-radius: 3px;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
@@ -1089,7 +1067,6 @@ img {
   background-color: #3b4043;
   margin-top: 25px;
 }
-
 
 /******************************************** 
   フラッシュメッセージ
@@ -1138,7 +1115,8 @@ code {
 .hljs-formula,
 .hljs-attr,
 .hljs-property,
-.hljs-params {}
+.hljs-params {
+}
 
 .hljs-comment {
   color: #697070;
@@ -1153,17 +1131,14 @@ code {
   color: #444;
 }
 
-
 .hljs-keyword,
 .hljs-attribute,
 .hljs-selector-tag,
 .hljs-meta .hljs-keyword,
-
 .hljs-doctag,
 .hljs-name {
   font-weight: bold;
 }
-
 
 /* User color: hue: 0 */
 
@@ -1208,7 +1183,6 @@ code {
   color: #397300;
 }
 
-
 /* Meta color: hue: 200 */
 
 .hljs-meta {
@@ -1218,7 +1192,6 @@ code {
 .hljs-meta .hljs-string {
   color: #38a;
 }
-
 
 /* Misc effects */
 
