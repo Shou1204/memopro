@@ -6,6 +6,10 @@ class FavoritesController < ApplicationController
   end
 
   def destroy
+    favorite = Favorite.find_by(memo_id: params[:id], user_id: current_user.id)
+    if favorite
+      favorite.destroy
+    end
   end
 
   private

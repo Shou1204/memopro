@@ -34,9 +34,15 @@
               <%= memo.created_at.strftime('%Y/%m/%d %k:%M') %>
             </div>
             <div class="favorite_btn">
-              <%= image_tag "heart_empty.png"%>
-              <%= button_to "お気に入り", favorites_path(memo_id: memo.id), method: :post %>
-              <p class="fukidashi" >お気に入り</P>
+              <% if current_user.favorites.exists?(memo_id: memo.id) %>
+                <%= image_tag "heart_empty.png"%>
+                <%= button_to "外す", favorite_path(id: memo.id), method: :delete %>
+                <p class="fukidashi" ></P>
+              <% else %>
+                <%= image_tag "heart_empty.png"%>
+                <%= button_to "お気に入り", favorites_path(memo_id: memo.id), method: :post %>
+                <p class="fukidashi" ></P>
+              <% end %>
             </div>
           </div>
         </div>
