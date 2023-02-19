@@ -6,6 +6,8 @@ class User < ApplicationRecord
 
   has_many :memos
   has_many :comments
+  has_many :favorites, dependent: :destroy
+  has_many :memos, through: :favorites
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :avatar

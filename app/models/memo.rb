@@ -4,4 +4,6 @@ class Memo < ApplicationRecord
   has_many :comments
   has_many :memo_tags, dependent: :destroy
   has_many :tags, through: :memo_tags
+  has_many :favorites, dependent: :destroy
+  has_many :users, through: :favorites
 end
