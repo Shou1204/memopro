@@ -35,6 +35,7 @@
             </div>
             <div class="favorite_btn">
               <%= image_tag "heart_empty.png"%>
+              <%= button_to "お気に入り", favorites_path(memo_id: memo.id), method: :post %>
               <p class="fukidashi" >お気に入り</P>
             </div>
           </div>
